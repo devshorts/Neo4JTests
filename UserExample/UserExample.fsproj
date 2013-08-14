@@ -67,8 +67,10 @@
     </Reference>
     <Reference Include="System.Net.Http.WebRequest" />
     <Reference Include="System.Numerics" />
-    <ProjectReference Include="..\Neo4JTests\Neo4JBase.fsproj">
-      <Name>Neo4JBase</Name>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseTypes\BaseTypes.fsproj">
+      <Name>BaseTypes</Name>
       <Project>{e619db15-92d2-4db7-9ad2-c407f4a8f84d}</Project>
       <Private>True</Private>
     </ProjectReference>
