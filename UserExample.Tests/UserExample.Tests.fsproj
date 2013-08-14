@@ -93,6 +93,11 @@
     <None Include="generatedGraph.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BaseTypes\BaseTypes.fsproj">
+      <Name>BaseTypes</Name>
+      <Project>{e619db15-92d2-4db7-9ad2-c407f4a8f84d}</Project>
+      <Private>True</Private>
+    </ProjectReference>
     <ProjectReference Include="..\UserExample\UserExample.fsproj">
       <Name>UserExample</Name>
       <Project>{4fe10350-b58c-485b-8e80-edfdd4313fdf}</Project>

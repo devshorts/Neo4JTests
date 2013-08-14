@@ -5,12 +5,12 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>4fe10350-b58c-485b-8e80-edfdd4313fdf</ProjectGuid>
+    <ProjectGuid>e619db15-92d2-4db7-9ad2-c407f4a8f84d</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>UserExample</RootNamespace>
-    <AssemblyName>UserExample</AssemblyName>
+    <RootNamespace>Neo4JTests</RootNamespace>
+    <AssemblyName>Neo4JBase</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <Name>UserExample</Name>
+    <Name>BaseTypes</Name>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -21,7 +21,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
-    <DocumentationFile>bin\Debug\UserExample.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\Neo4JTests.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,27 +30,15 @@
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
-    <DocumentationFile>bin\Release\UserExample.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\Neo4JTests.XML</DocumentationFile>
   </PropertyGroup>
-  <PropertyGroup>
-    <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
-  </PropertyGroup>
-  <Import Project="$(MSBuildExtensionsPath32)\..\Microsoft SDKs\F#\3.0\Framework\v4.0\Microsoft.FSharp.Targets" Condition=" Exists('$(MSBuildExtensionsPath32)\..\Microsoft SDKs\F#\3.0\Framework\v4.0\Microsoft.FSharp.Targets')" />
-  <ItemGroup>
-    <Compile Include="Nodes.fs" />
-    <Compile Include="UserRelations.fs" />
-    <Compile Include="UserQueries.fs" />
-    <Compile Include="UserBuilder.fs" />
-    <None Include="packages.config" />
-  </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
     <Reference Include="FSharp.Core, Version=4.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <Private>True</Private>
     </Reference>
     <Reference Include="Neo4jClient">
-      <HintPath>..\packages\Neo4jClient.1.0.0.590\lib\net40\Neo4jClient.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>C:\Projects\Personal2\Neo4JTests\packages\Neo4jClient.1.0.0.590\lib\net40\Neo4jClient.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>C:\Projects\Personal2\Neo4JTests\packages\Newtonsoft.Json.5.0.6\lib\net40\Newtonsoft.Json.dll</HintPath>
@@ -70,12 +58,14 @@
     <Reference Include="System.Numerics" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BaseTypes\BaseTypes.fsproj">
-      <Name>BaseTypes</Name>
-      <Project>{e619db15-92d2-4db7-9ad2-c407f4a8f84d}</Project>
-      <Private>True</Private>
-    </ProjectReference>
+    <Compile Include="Connection.fs" />
+    <Compile Include="RelationShipBase.fs" />
+    <None Include="packages.config" />
   </ItemGroup>
+  <PropertyGroup>
+    <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\..\Microsoft SDKs\F#\3.0\Framework\v4.0\Microsoft.FSharp.Targets" Condition=" Exists('$(MSBuildExtensionsPath32)\..\Microsoft SDKs\F#\3.0\Framework\v4.0\Microsoft.FSharp.Targets')" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.8\tools\Microsoft.Bcl.Build.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
