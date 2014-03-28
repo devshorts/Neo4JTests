@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>UserExample</RootNamespace>
     <AssemblyName>UserExample</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <Name>UserExample</Name>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -49,11 +49,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Neo4jClient">
-      <HintPath>..\packages\Neo4jClient.1.0.0.590\lib\net40\Neo4jClient.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\Neo4jClient.1.0.0.651\lib\net40\Neo4jClient.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>C:\Projects\Personal2\Neo4JTests\packages\Newtonsoft.Json.5.0.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

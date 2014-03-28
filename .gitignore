@@ -19,4 +19,6 @@ obj/
 *.user
 *.sdf
 *.opensdf
+packages/
 !WinPCap/Lib/*
+/*.ncrunchsolution

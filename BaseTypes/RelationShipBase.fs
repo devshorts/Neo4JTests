@@ -6,14 +6,17 @@ open Neo4jClient
 [<AutoOpen>]
 module RelationShips = 
     
+    type Neo4JSourceANdTargetDefinition<'T> = 
+        inherit IRelationshipAllowingSourceNode<'T>
+
+        inherit IRelationshipAllowingTargetNode<'T>
+
     [<AbstractClass>]
     type Target<'T> (targetNode) = 
 
         inherit Relationship(targetNode)
 
-        interface IRelationshipAllowingSourceNode<'T>
-
-        interface IRelationshipAllowingTargetNode<'T>
+        interface Neo4JSourceANdTargetDefinition<'T>
 
 
     [<AbstractClass>]
@@ -21,6 +24,4 @@ module RelationShips =
 
         inherit Relationship(targetNode, data)
 
-        interface IRelationshipAllowingSourceNode<'T>
-
-        interface IRelationshipAllowingTargetNode<'T>
+        interface Neo4JSourceANdTargetDefinition<'T>
